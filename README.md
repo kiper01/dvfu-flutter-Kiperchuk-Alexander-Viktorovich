@@ -21,3 +21,9 @@
 ![image](https://github.com/kiper01/dvfu-flutter-Kiperchuk-Alexander-Viktorovich/assets/122391140/0f4f44ee-b8b6-47f5-8f58-41afcc1d03d0)
 
 Вывод по заданию: справился без проблем. До этого никогда не писал ReadMe, интересный опыт.
+
+## Задание №3
+
+![alt text](image-1.png)
+
+Вывод по заданию: все получилось. Делал с подсказками.
