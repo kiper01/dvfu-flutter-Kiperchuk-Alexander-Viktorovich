@@ -22,7 +22,7 @@ class Profile {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(
         title: 'VFacebook home page',
         profile: Profile(
-          imagePath: 'avatar.jpg',
+          imagePath: 'assets/images/avatar.jpg',
           firstName: 'Александр',
           lastName: 'Киперчук',
           dateOfBirth: '28-03-2001',
@@ -49,8 +49,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title, required this.profile})
-      : super(key: key);
+  const MyHomePage({super.key, required this.title, required this.profile});
 
   final String title;
   final Profile profile;
@@ -108,29 +107,29 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     Text(
                       '${widget.profile.firstName} ${widget.profile.lastName}',
-                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text('Дата рождения: ${widget.profile.dateOfBirth}'),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text('Обо Мне: ${widget.profile.about}'),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: _incrementLikes,
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(Icons.thumb_up),
-                          SizedBox(width: 5),
+                          const Icon(Icons.thumb_up),
+                          const SizedBox(width: 5),
                           Text('Класс ($_likes)'),
                         ],
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Text('Статус: $_status'),
                     ElevatedButton(
                       onPressed: _generateRandomStatus,
-                      child: Text('Генерация статуса'),
+                      child: const Text('Генерация статуса'),
                     ),
                   ],
                 ),
